@@ -11,7 +11,7 @@ COPY . .
 RUN pip install .
 
 FROM base AS release
-RUN if [ -z "$VERSION" ] ; then pip3 install haco ; else pip3 install haco==${VERSION} ; fi
+RUN if [ -z "$VERSION" ] ; then pip3 install haco ; else pip3 install haco==${v0.0.20} ; fi
 
 
 FROM ${TYPE} as image
